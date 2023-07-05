@@ -1,4 +1,6 @@
 import Head from 'next/head'
+import Navbar from '@/components/navbar'
+import Wave from '@/components/wave'
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import Link from 'next/link'
@@ -17,92 +19,51 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <header>
-        <nav className="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-          <div className="container">
-            <a className="navbar-brand" href="#">Tu Empresa</a>
-            <button
-              className="navbar-toggler"
-              type="button"
-              data-toggle="collapse"
-              data-target="#navbarNav"
-              aria-controls="navbarNav"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span className="navbar-toggler-icon"></span>
-            </button>
-            <div className="collapse navbar-collapse" id="navbarNav">
-              <ul className="navbar-nav ms-auto">
-                <li className="nav-item">
-                  <a className="nav-link" href="#servicios">Servicios</a>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link" href="#portafolio">Portafolio</a>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link" href="#contacto">Contacto</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </nav>
+        <Navbar />
       </header>
       <main>
-          <section id="hero" className="bg-primary text-white text-center py-5 centered">
-            <div className="container">
-              <h2 className="display-4">Servicios de Programación y Hosting</h2>
-              <p className="lead">
-                Desarrollamos soluciones web personalizadas para tu negocio
-              </p>
-              <a href="#contacto" className="btn btn-light btn-lg">Contáctanos</a>
-            </div>
+        <section id="hero" className="centered position-relative">
+          <div className="container text-white position-absolute text-center bottom-0 pb-5">
+            <h2 className="display-4">Crea tu e-commerce o sitio Web fácilmente</h2>
+            <p className="lead">
+              Sin programación, unicamente completando un formulario
+            </p>
+            <a href="#servicios" className="btn btn-light btn-lg">Conoce más</a>
+          </div>
         </section>
-
-        <section id="servicios" className="py-5 centered">
+        <Wave />
+        <section id="servicios" className="py-5">
           <div className="container">
-            <h2 className="text-center mb-5">Nuestros Servicios</h2>
+            <h1 className="text-center mb-5 mt-5">Nuestros Servicios</h1>
             <div className="row">
-              <div className="col-lg-4 mb-4">
-                <div className="card">
-                  <img
-                    src="programming.png"
-                    className="card-img-top"
-                    alt="Programación"
-                  />
-                  <div className="card-body">
-                    <h3 className="card-title">Desarrollo Web</h3>
-                    <p className="card-text">
-                      Creamos sitios web a medida, optimizados y modernos
-                    </p>
-                  </div>
-                </div>
+              <div className="col-lg-6 mb-4">
+                <Image
+                  src="/Logo.svg"
+                  alt="Descripción de la imagen"
+                  layout="responsive"
+                  priority={false}
+                  width={450}
+                  height={450}
+                />
               </div>
-              <div className="col-lg-4 mb-4">
-                <div className="card">
-                  <img src="hosting.png" className="card-img-top" alt="Hosting" />
-                  <div className="card-body">
-                    <h3 className="card-title">Hosting Web</h3>
-                    <p className="card-text">
-                      Ofrecemos servicios de hosting confiables y seguros
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="col-lg-4 mb-4">
-                <div className="card">
-                  <img src="ecommerce.png" className="card-img-top" alt="Ecommerce" />
-                  <div className="card-body">
-                    <h3 className="card-title">Comercio Electrónico</h3>
-                    <p className="card-text">
-                      Desarrollamos tiendas en línea escalables y funcionales
-                    </p>
-                  </div>
-                </div>
+              <div className="col-lg-6 mb-4">
+                <h3>¡MeNegocio es la mejor plataforma online de creación de páginas web y tiendas ecommerce sin programación! </h3>
+                <p>Si estás buscando una forma <strong>fácil y rápida</strong>  de llevar tu negocio al mundo digital, estás en el lugar adecuado. <br />
+
+                  Nuestra plataforma te ofrece la posibilidad de crear páginas web simples y elegantes sin necesidad de conocimientos técnicos o de programación. ¿No sabes cómo empezar? ¡No te preocupes! Hemos diseñado un formulario intuitivo que te guiará paso a paso en el proceso de creación. Solo necesitas completar algunos campos y seleccionar las opciones que mejor se adapten a tus necesidades.
+
+                  ¿Estás listo para llevar tu negocio al siguiente nivel? Con nuestra plataforma, también puedes crear una tienda ecommerce totalmente funcional. Ya sea que vendas productos físicos o servicios digitales, nuestro sistema de creación de tiendas te brinda todas las herramientas necesarias para crear una experiencia de compra en línea excepcional. Desde la gestión de inventario hasta las opciones de pago y envío, te proporcionamos las soluciones completas para que puedas centrarte en lo que mejor sabes hacer: ¡hacer crecer tu negocio!
+
+                  Subscribirte a nuestra plataforma es muy sencillo. Una vez que hayas creado tu página web o tienda ecommerce, te proporcionaremos opciones flexibles de alojamiento y personalización para que puedas adaptar tu presencia en línea de acuerdo con tus necesidades y estilo único. Además, ofrecemos soporte técnico dedicado para asegurarnos de que tu experiencia sea fluida y exitosa.
+
+                  No importa si eres un emprendedor, un autónomo o una pequeña empresa, nuestra plataforma está diseñada para brindarte una solución completa y accesible para llevar tu negocio al mundo digital. Únete a nuestra comunidad de usuarios satisfechos y descubre lo fácil que puede ser crear una presencia en línea impactante y rentable.
+
+                  ¡Empieza hoy mismo y desbloquea todo el potencial de tu negocio en internet con nuestra plataforma de creación de páginas web y tiendas ecommerce sin programación! Subscríbete ahora y comienza a construir tu plataforma en tan solo unos minutos.</p>
               </div>
             </div>
           </div>
         </section>
-        <section id="portafolio" className="py-5 centered">
+        <section id="portafolio" className="py-5 ">
           <div className="container">
             <h2 className="text-center mb-5">Nuestro Portafolio</h2>
             <div className="row">

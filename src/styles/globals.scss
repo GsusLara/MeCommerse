@@ -1,0 +1,16 @@
+/* styles/globals.css */
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import "./colores.scss";
+
+/* styles components */
+@import "../components/navbar/navbar.scss";
+
+
+.centered {
+    display: flex;
+    align-items:baseline;
+    justify-content: center;
+    height: calc(70vh - 60px);
+    text-align: center;
+    background-color: $secundario;
+  }
