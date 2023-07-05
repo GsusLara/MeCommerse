@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Navbar from '@/components/navbar'
 import Wave from '@/components/wave'
-import Image from 'next/image'
+import Image from "next/legacy/image"
 import { Inter } from 'next/font/google'
 import Link from 'next/link'
 
@@ -10,9 +10,6 @@ import Link from 'next/link'
 export default function Home() {
   return (
     <>
-      {/* <Link href="cuenta">
-          mi cuenta
-        </Link> */}
       <Head>
         <title>MeNegocio - Tu Negocio en la web al alcance de todos</title>
         <link rel="icon" href="/favicon.ico" />
@@ -33,32 +30,53 @@ export default function Home() {
         </section>
         <Wave />
         <section id="servicios" className="py-5">
-          <div className="container">
-            <h1 className="text-center mb-5 mt-5">Nuestros Servicios</h1>
-            <div className="row">
-              <div className="col-lg-6 mb-4">
+          <div className="container mt-3 mt-lg-5">
+            <div className="row justify-content-md-center mb-lg-5">
+              <div className="col-12 col-lg-8">
+                <h3 className='text-center'>¡MeNegocio es la mejor plataforma online de creación de páginas web y tiendas ecommerce sin programación! </h3>
+              </div>
+            </div>
+            <div className="row align-items-center ">
+              <div className="col-4 col-lg-4 mb-lg-4 mx-auto">
                 <Image
                   src="/Logo.svg"
                   alt="Descripción de la imagen"
                   layout="responsive"
-                  priority={false}
-                  width={450}
-                  height={450}
+                  priority
+                  width={250}
+                  height={250}
                 />
               </div>
-              <div className="col-lg-6 mb-4">
-                <h3>¡MeNegocio es la mejor plataforma online de creación de páginas web y tiendas ecommerce sin programación! </h3>
-                <p>Si estás buscando una forma <strong>fácil y rápida</strong>  de llevar tu negocio al mundo digital, estás en el lugar adecuado. <br />
-
-                  Nuestra plataforma te ofrece la posibilidad de crear páginas web simples y elegantes sin necesidad de conocimientos técnicos o de programación. ¿No sabes cómo empezar? ¡No te preocupes! Hemos diseñado un formulario intuitivo que te guiará paso a paso en el proceso de creación. Solo necesitas completar algunos campos y seleccionar las opciones que mejor se adapten a tus necesidades.
-
-                  ¿Estás listo para llevar tu negocio al siguiente nivel? Con nuestra plataforma, también puedes crear una tienda ecommerce totalmente funcional. Ya sea que vendas productos físicos o servicios digitales, nuestro sistema de creación de tiendas te brinda todas las herramientas necesarias para crear una experiencia de compra en línea excepcional. Desde la gestión de inventario hasta las opciones de pago y envío, te proporcionamos las soluciones completas para que puedas centrarte en lo que mejor sabes hacer: ¡hacer crecer tu negocio!
-
-                  Subscribirte a nuestra plataforma es muy sencillo. Una vez que hayas creado tu página web o tienda ecommerce, te proporcionaremos opciones flexibles de alojamiento y personalización para que puedas adaptar tu presencia en línea de acuerdo con tus necesidades y estilo único. Además, ofrecemos soporte técnico dedicado para asegurarnos de que tu experiencia sea fluida y exitosa.
-
-                  No importa si eres un emprendedor, un autónomo o una pequeña empresa, nuestra plataforma está diseñada para brindarte una solución completa y accesible para llevar tu negocio al mundo digital. Únete a nuestra comunidad de usuarios satisfechos y descubre lo fácil que puede ser crear una presencia en línea impactante y rentable.
-
-                  ¡Empieza hoy mismo y desbloquea todo el potencial de tu negocio en internet con nuestra plataforma de creación de páginas web y tiendas ecommerce sin programación! Subscríbete ahora y comienza a construir tu plataforma en tan solo unos minutos.</p>
+              <div className="col-lg-8 mb-4 text-center">
+                <p className='mt-4'>
+                  Si estás buscando una forma <strong>fácil y rápida</strong>  de llevar tu negocio al mundo digital, estás en el lugar adecuado.<br />
+                  Crea páginas web sin necesidad de conocimientos técnicos o de programación.</p>
+                <h4 className='text-center'>¿No sabes cómo empezar?</h4>
+                <p>
+                  Hemos diseñado un formulario intuitivo que te guiará paso a paso, solo necesitas completar algunos campos y seleccionar las opciones que mejor se adapten a tus necesidades.
+                </p>
+                <h4 className='text-center'>¡Comienza ahora mismo!</h4>
+                <div className="text-center">
+                  <button type="button" className="btn btn-primary btn-lg m-2 botonCrearE">Crear un ecommerse</button>
+                  <button type="button" className="btn btn-primary btn-lg m-2 botonCrearP">Crear un sitio web</button>
+                </div>
+                <p>
+                  Subscríbete <strong>ahora</strong> y construye tu plataforma en tan solo unos minutos, Mira nuestra{" "}
+                  <Link href="mesite" className='textoResaltado'>
+                    página demo.
+                  </Link>
+                </p>
+                <h4 className='text-center'>¿Tienes más dudas?</h4>
+                <p>
+                  Sigue los enlaces si deseas conocer los{" "}
+                  <Link href="#portafolio" className='textoResaltado'>
+                    precios
+                  </Link>
+                  {" "}o si requieres más información solo{" "}
+                  <Link href="#contacto" className='textoResaltado'>
+                    contáctanos.
+                  </Link>
+                </p>
               </div>
             </div>
           </div>

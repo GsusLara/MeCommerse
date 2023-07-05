@@ -14,3 +14,16 @@
     text-align: center;
     background-color: $secundario;
   }
+
+.botonCrearE, .botonCrearP{
+  background-color: $terceario;
+  border: $terceario;
+  &:hover{
+  background-color: $secundario;
+  border: $secundario;
+  }
+}
+
+.textoResaltado{
+  color: $principal;
+}
