@@ -23,20 +23,21 @@ export default function Home() {
           <div className="container text-white position-absolute text-center bottom-0 pb-5">
             <h2 className="display-4">Crea tu e-commerce o sitio Web fácilmente</h2>
             <p className="lead">
-              Sin programación, unicamente completando un formulario
+              ¡Sin programación y hasta con tu dispositivo móvil!
             </p>
             <a href="#servicios" className="btn btn-light btn-lg">Conoce más</a>
           </div>
         </section>
-        <Wave />
-        <section id="servicios" className="py-5">
+        <Wave color="#5060ac" />
+
+        <section id="servicios" className="py-lg-5">
           <div className="container mt-3 mt-lg-5">
             <div className="row justify-content-md-center mb-lg-5">
               <div className="col-12 col-lg-8">
-                <h3 className='text-center'>¡MeNegocio es la mejor plataforma online de creación de páginas web y tiendas ecommerce sin programación! </h3>
+                <h3 className='text-center fw-bold'>¡MeNegocio es la mejor plataforma online de creación de páginas web y tiendas ecommerce sin programación! </h3>
               </div>
             </div>
-            <div className="row align-items-center ">
+            <div className="row align-items-center">
               <div className="col-4 col-lg-4 mb-lg-4 mx-auto">
                 <Image
                   src="/Logo.svg"
@@ -49,19 +50,18 @@ export default function Home() {
               </div>
               <div className="col-lg-8 mb-4 text-center">
                 <p className='mt-4'>
-                  Si estás buscando una forma <strong>fácil y rápida</strong>  de llevar tu negocio al mundo digital, estás en el lugar adecuado.<br />
-                  Crea páginas web sin necesidad de conocimientos técnicos o de programación.</p>
+                  Si estás buscando una forma <strong>fácil y rápida</strong>  de llevar tu negocio al mundo digital, estás en el lugar adecuado.</p>
                 <h4 className='text-center'>¿No sabes cómo empezar?</h4>
                 <p>
                   Hemos diseñado un formulario intuitivo que te guiará paso a paso, solo necesitas completar algunos campos y seleccionar las opciones que mejor se adapten a tus necesidades.
                 </p>
                 <h4 className='text-center'>¡Comienza ahora mismo!</h4>
                 <div className="text-center">
-                  <button type="button" className="btn btn-primary btn-lg m-2 botonCrearE">Crear un ecommerse</button>
+                  <button type="button" className="btn btn-primary btn-lg m-2 botonCrearE">Crear un e-commerce</button>
                   <button type="button" className="btn btn-primary btn-lg m-2 botonCrearP">Crear un sitio web</button>
                 </div>
                 <p>
-                  Subscríbete <strong>ahora</strong> y construye tu plataforma en tan solo unos minutos, Mira nuestra{" "}
+                  Subscríbete <strong>ahora</strong> y construye tu plataforma en tan solo unos minutos, mira nuestra{" "}
                   <Link href="mesite" className='textoResaltado'>
                     página demo.
                   </Link>
@@ -69,7 +69,7 @@ export default function Home() {
                 <h4 className='text-center'>¿Tienes más dudas?</h4>
                 <p>
                   Sigue los enlaces si deseas conocer los{" "}
-                  <Link href="#portafolio" className='textoResaltado'>
+                  <Link href="#precios" className='textoResaltado'>
                     precios
                   </Link>
                   {" "}o si requieres más información solo{" "}
@@ -81,54 +81,64 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section id="portafolio" className="py-5 ">
-          <div className="container">
-            <h2 className="text-center mb-5">Nuestro Portafolio</h2>
-            <div className="row">
+
+        <section id="precios" className="py-lg-5">
+          <div className="container mt-5">
+            <div className="row justify-content-center mb-2">
+              <div className="col-12 col-lg-8">
+                <h3 className='text-center fw-bold'>Descubre lo fácil que puede ser crear una presencia en línea impactante y rentable.</h3>
+              </div>
+            </div>
+            <div className="row justify-content-center">
+
               <div className="col-lg-4 mb-4">
-                <div className="card">
-                  <img
-                    src="portfolio-item-1.jpg"
-                    className="card-img-top"
-                    alt="Proyecto 1"
-                  />
-                  <div className="card-body">
-                    <h3 className="card-title">Proyecto 1</h3>
-                    <p className="card-text">Breve descripción del proyecto 1</p>
+                <div className="card h-100">
+                  <div className="card-body d-flex flex-column">
+                    <h2 className="card-title">Página web personalizada</h2>
+                    <p className="card-text">Crea una presencia en línea impactante y profesional con una página web personalizada.</p>
+                    <p className="card-text">Detalles de la suscripción:</p>
+                    <ul className="card-text">
+                      <li>Hosting confiable para mantener tu sitio web en línea.</li>
+                      <li>Certificado SSL para garantizar la seguridad de los datos transmitidos.</li>
+                      <li>Editor fácil de usar para personalizar el contenido y las imágenes de tu sitio web.</li>
+                      <li>Soporte técnico dedicado para ayudarte en cualquier momento.</li>
+                    </ul>
+                    <div className="mt-auto">
+                      <p className="card-text text-end "> <strong className='fs-4'>$11 USD *mes </strong>(IVA incluido)</p>
+                    </div>
                   </div>
                 </div>
               </div>
+
               <div className="col-lg-4 mb-4">
-                <div className="card">
-                  <img
-                    src="portfolio-item-2.jpg"
-                    className="card-img-top"
-                    alt="Proyecto 2"
-                  />
-                  <div className="card-body">
-                    <h3 className="card-title">Proyecto 2</h3>
-                    <p className="card-text">Breve descripción del proyecto 2</p>
+                <div className="card h-100">
+                  <div className="card-body d-flex flex-column">
+                    <h2 className="card-title">Tienda online completa</h2>
+                    <p className="card-text">Lleva tu negocio al mundo digital y vende tus productos en línea con una tienda ecommerce completa.</p>
+                    <p className="card-text">Detalles de la suscripción:</p>
+                    <ul className="card-text">
+                      <li>Hosting confiable para asegurar que tu tienda esté siempre disponible.</li>
+                      <li>Certificado SSL para garantizar la seguridad y confianza</li>
+                      <li>Carrito de compras integrado para una experiencia de compra fluida.</li>
+                      <li>Generación de órdenes y gestión de inventario para administrar tus productos fácilmente.</li>
+                      <li>Soporte técnico dedicado para resolver cualquier consulta o problema.</li>
+                    </ul>
+                    <div className="mt-auto">
+                      <p className="card-text text-end"> <strong className='fs-4'>$19 USD *mes </strong>(IVA incluido)</p>
+                    </div>
                   </div>
                 </div>
               </div>
-              <div className="col-lg-4 mb-4">
-                <div className="card">
-                  <img
-                    src="portfolio-item-3.jpg"
-                    className="card-img-top"
-                    alt="Proyecto 3"
-                  />
-                  <div className="card-body">
-                    <h3 className="card-title">Proyecto 3</h3>
-                    <p className="card-text">Breve descripción del proyecto 3</p>
-                  </div>
-                </div>
-              </div>
+
             </div>
           </div>
         </section>
       </main>
-      <footer id="contacto" className="bg-light py-5">
+
+      <div style={{ transform: "rotate(180deg)" }}>
+        <Wave color='#DDDDDD' />
+      </div>
+      <footer id="contacto" className=" py-5">
         <div className="container">
           <h2 className="text-center mb-5">Contáctanos</h2>
           <form>
@@ -169,7 +179,6 @@ export default function Home() {
           </form>
         </div>
       </footer>
-
     </>
   )
 }

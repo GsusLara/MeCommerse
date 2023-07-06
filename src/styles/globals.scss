@@ -1,29 +1,38 @@
 /* styles/globals.css */
 @import "~bootstrap/dist/css/bootstrap.min.css";
+@import url("https://fonts.googleapis.com/css2?family=Asap:ital@1&display=swap");
 @import "./colores.scss";
 
 /* styles components */
 @import "../components/navbar/navbar.scss";
 
-
+main {
+  font-family: "Asap", sans-serif;
+}
 .centered {
-    display: flex;
-    align-items:baseline;
-    justify-content: center;
-    height: calc(70vh - 60px);
-    text-align: center;
-    background-color: $secundario;
-  }
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  height: calc(70vh - 60px);
+  text-align: center;
+  background-color: $secundario;
+  margin-bottom: -2px;
+}
 
-.botonCrearE, .botonCrearP{
+.botonCrearE,
+.botonCrearP {
   background-color: $terceario;
   border: $terceario;
-  &:hover{
-  background-color: $secundario;
-  border: $secundario;
+  &:hover {
+    background-color: $secundario;
+    border: $secundario;
   }
 }
 
-.textoResaltado{
+.textoResaltado {
   color: $principal;
+}
+#contacto{
+  background-color: #DDDDDD;
+  margin-top: -2px;
 }
