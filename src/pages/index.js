@@ -1,12 +1,14 @@
 import Head from 'next/head'
-import Navbar from '@/components/navbar'
-import Wave from '@/components/wave'
+import Navbar from '@/components/plataforma/navbar/navbar'
+import Footer from '@/components/plataforma/footer'
+import CardPrecio from '@/components/plataforma/cardPrecio'
+
 import Image from "next/legacy/image"
-import { Inter } from 'next/font/google'
 import Link from 'next/link'
+import Wave from '@/components/plataforma/wave'
+import { Inter } from 'next/font/google'
 
 // const inter = Inter({ subsets: ['latin'] })
-
 export default function Home() {
   return (
     <>
@@ -17,9 +19,7 @@ export default function Home() {
       </Head>
       <header>
         <Navbar />
-      </header>
-      <main>
-        <section id="hero" className="centered position-relative">
+        <section id="cabecera" className="position-relative">
           <div className="container text-white position-absolute text-center bottom-0 pb-5">
             <h2 className="display-4">Crea tu e-commerce o sitio Web fácilmente</h2>
             <p className="lead">
@@ -28,8 +28,9 @@ export default function Home() {
             <a href="#servicios" className="btn btn-light btn-lg">Conoce más</a>
           </div>
         </section>
-        <Wave color="#5060ac" />
-
+      </header>
+      <Wave color="#5060ac" />
+      <main>
         <section id="servicios" className="py-lg-5">
           <div className="container mt-3 mt-lg-5">
             <div className="row justify-content-md-center mb-lg-5">
@@ -62,18 +63,18 @@ export default function Home() {
                 </div>
                 <p>
                   Subscríbete <strong>ahora</strong> y construye tu plataforma en tan solo unos minutos, mira nuestra{" "}
-                  <Link href="mesite" className='textoResaltado'>
+                  <Link href="mesite" className='enlaces'>
                     página demo.
                   </Link>
                 </p>
                 <h4 className='text-center'>¿Tienes más dudas?</h4>
                 <p>
                   Sigue los enlaces si deseas conocer los{" "}
-                  <Link href="#precios" className='textoResaltado'>
+                  <Link href="#precios" className='enlaces'>
                     precios
                   </Link>
                   {" "}o si requieres más información solo{" "}
-                  <Link href="#contacto" className='textoResaltado'>
+                  <Link href="#contacto" className='enlaces'>
                     contáctanos.
                   </Link>
                 </p>
@@ -90,95 +91,35 @@ export default function Home() {
               </div>
             </div>
             <div className="row justify-content-center">
-
-              <div className="col-lg-4 mb-4">
-                <div className="card h-100">
-                  <div className="card-body d-flex flex-column">
-                    <h2 className="card-title">Página web personalizada</h2>
-                    <p className="card-text">Crea una presencia en línea impactante y profesional con una página web personalizada.</p>
-                    <p className="card-text">Detalles de la suscripción:</p>
-                    <ul className="card-text">
-                      <li>Hosting confiable para mantener tu sitio web en línea.</li>
-                      <li>Certificado SSL para garantizar la seguridad de los datos transmitidos.</li>
-                      <li>Editor fácil de usar para personalizar el contenido y las imágenes de tu sitio web.</li>
-                      <li>Soporte técnico dedicado para ayudarte en cualquier momento.</li>
-                    </ul>
-                    <div className="mt-auto">
-                      <p className="card-text text-end "> <strong className='fs-4'>$11 USD *mes </strong>(IVA incluido)</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="col-lg-4 mb-4">
-                <div className="card h-100">
-                  <div className="card-body d-flex flex-column">
-                    <h2 className="card-title">Tienda online completa</h2>
-                    <p className="card-text">Lleva tu negocio al mundo digital y vende tus productos en línea con una tienda ecommerce completa.</p>
-                    <p className="card-text">Detalles de la suscripción:</p>
-                    <ul className="card-text">
-                      <li>Hosting confiable para asegurar que tu tienda esté siempre disponible.</li>
-                      <li>Certificado SSL para garantizar la seguridad y confianza</li>
-                      <li>Carrito de compras integrado para una experiencia de compra fluida.</li>
-                      <li>Generación de órdenes y gestión de inventario para administrar tus productos fácilmente.</li>
-                      <li>Soporte técnico dedicado para resolver cualquier consulta o problema.</li>
-                    </ul>
-                    <div className="mt-auto">
-                      <p className="card-text text-end"> <strong className='fs-4'>$19 USD *mes </strong>(IVA incluido)</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
+              <CardPrecio
+                titulo="Página web personalizada"
+                descripcion="Crea una presencia en línea impactante y profesional con una página web personalizada."
+                lista="Detalles de la suscripción:"
+                items={["Hosting confiable para mantener tu sitio web en línea.",
+                  "Certificado SSL para garantizar la seguridad de los datos transmitidos.",
+                  "Editor fácil de usar para personalizar el contenido y las imágenes de tu sitio web.",
+                  "Soporte técnico dedicado para ayudarte en cualquier momento."]}
+                precio="$11 USD *mes"
+              />
+              <CardPrecio
+                titulo="Tienda online completa"
+                descripcion="Lleva tu negocio al mundo digital y vende tus productos en línea con una tienda ecommerce completa."
+                lista="Detalles de la suscripción:"
+                items={["Hosting confiable para asegurar que tu tienda esté siempre disponible.",
+                "Certificado SSL para garantizar la seguridad y confianza.",
+                "Carrito de compras integrado para una experiencia de compra fluida.",
+                "Generación de órdenes y gestión de inventario para administrar tus productos fácilmente.",
+                "Soporte técnico dedicado para resolver cualquier consulta o problema."]}
+                precio="$19 USD *mes"
+              />
             </div>
           </div>
         </section>
       </main>
-
       <div style={{ transform: "rotate(180deg)" }}>
         <Wave color='#DDDDDD' />
       </div>
-      <footer id="contacto" className=" py-5">
-        <div className="container">
-          <h2 className="text-center mb-5">Contáctanos</h2>
-          <form>
-            <div className="row">
-              <div className="col-lg-6">
-                <div className="form-group">
-                  <label htmlFor="name">Nombre</label>
-                  <input
-                    type="text"
-                    className="form-control"
-                    id="name"
-                    placeholder="Tu nombre"
-                  />
-                </div>
-                <div className="form-group">
-                  <label htmlFor="email">Correo electrónico</label>
-                  <input
-                    type="email"
-                    className="form-control"
-                    id="email"
-                    placeholder="Tu correo electrónico"
-                  />
-                </div>
-              </div>
-              <div className="col-lg-6">
-                <div className="form-group">
-                  <label htmlFor="message">Mensaje</label>
-                  <textarea
-                    className="form-control"
-                    id="message"
-                    rows="5"
-                    placeholder="Tu mensaje"
-                  ></textarea>
-                </div>
-              </div>
-            </div>
-            <button type="submit" className="btn btn-primary">Enviar</button>
-          </form>
-        </div>
-      </footer>
+      <Footer />
     </>
   )
 }
